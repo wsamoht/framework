@@ -751,7 +751,7 @@ class TestResponseTest extends TestCase
         $response->assertJsonPathExists('*.foo');
     }
 
-    public function testAssertJsonPathExistFailsIfPathNotAtTheBeginning()
+    public function testAssertJsonPathExistsFailsIfPathNotAtTheBeginning()
     {
         $this->expectException(AssertionFailedError::class);
 
@@ -762,7 +762,7 @@ class TestResponseTest extends TestCase
         $response->assertJsonPathExists('foo');
     }
 
-    public function testAssertJsonPathExistCanFail()
+    public function testAssertJsonPathExistsCanFail()
     {
         $this->expectException(AssertionFailedError::class);
         $this->expectExceptionMessage('Failed asserting the path 0.notfound was found in the response.');
